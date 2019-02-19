@@ -80,9 +80,10 @@
         let lis = [...heads.children];
         console.log(lis)
         lis.forEach((item, i) => {
-
             item.onclick = () => {
-                // 
+                lis.forEach(file => {
+                    file.classList.remove('bg')
+                })
                 lis[i].classList.add('bg')
             }
         })
